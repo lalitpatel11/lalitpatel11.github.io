@@ -1,0 +1,24 @@
+.profile-pic {
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    border: 8px solid #2d2f3f;
+}
+
+.hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #040b14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.hero-name {
+    color: white;
+}
