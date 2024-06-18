@@ -129,6 +129,19 @@ nav>ul>li a {
     .fa-solid {
         display: block !important;
     }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-card-img {
+        order: 2;
+    }
+
+    .image-part {
+        order: 1;
+    }
 }
 
 
@@ -190,7 +203,7 @@ nav>ul>li a {
 .profile-icon {
     background-color: white;
     border-radius: 100%;
-    padding: 5px;
+    padding: 2vh;
     margin-right: 10px;
     margin-left: 10px;
 }
