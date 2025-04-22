@@ -16,73 +16,239 @@
             <i class="fa-solid fa-bars"></i>
             <nav>
                 <ul>
-                    <li><a class="active" href="default.asp">HOME</a></li>
-                    <li><a href="news.asp">ABOUT</a></li>
-                    <li><a href="contact.asp">RESUME</a></li>
-                    <li><a href="about.asp">WORKS</a></li>
-                    <li><a href="about.asp">TESTIMONIALS</a></li>
-                    <li><a href="about.asp">CONTACT</a></li>
+                    <li><a class="active" href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#resume">RESUME</a></li>
+                    <li><a href="#portfolio">WORKS</a></li>
+                    <li><a href="#testimonials">TESTIMONIALS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
+            <div class="theme-switcher">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-palette"></i>
+                </button>
+                <div class="theme-options">
+                    <button class="theme-option" data-theme="default">
+                        <span class="color-preview default"></span>
+                        Default
+                    </button>
+                    <button class="theme-option" data-theme="ocean">
+                        <span class="color-preview ocean"></span>
+                        Ocean
+                    </button>
+                    <button class="theme-option" data-theme="sunset">
+                        <span class="color-preview sunset"></span>
+                        Sunset
+                    </button>
+                    <button class="theme-option" data-theme="forest">
+                        <span class="color-preview forest"></span>
+                        Forest
+                    </button>
+                    <button class="theme-option" data-theme="monochrome">
+                        <span class="color-preview monochrome"></span>
+                        Monochrome
+                    </button>
+                </div>
+            </div>
         </header>
-        <main class="profile-info">
-            <div class="profile-card-img">
-                <h1>@LalitPatel <img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif"
-                        alt="Waving hand animated gif" height="70" width="70" /></h1>
-                <div class="hero-section">
-                    <h2 class="heading">I am a <span class="text blue">Software Developer</span></h2>
-                </div>
-                <div>
-                    <div class="main-icon email">
-                        <i class="fa-regular fa-envelope"></i>
-                        <p class="hero-email">patellalit626@gmail.com</p>
+        <main class="profile-info" id="home">
+            <div class="profile-content">
+                <div class="profile-text">
+                    <div class="profile-greeting">
+                        <span class="greeting-text">👋 Hello, I am</span>
                     </div>
-                    <div class="main-icon ">
-                        <i class="fas fa-phone" style="color: #ffffff;"></i>
-                        <p class="hero-email">+91 8114493700</p>
+                    <h1 class="profile-name">
+                        Lalit Patel 
+                        <img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif" 
+                            alt="Waving hand animated gif" 
+                            class="waving-hand" />
+                    </h1>
+                    <div class="hero-section">
+                        <h2 class="heading">I'm a <span class="text blue">Software Developer</span></h2>
                     </div>
-
-                    <p>
-                        Hello! I'm Lalit Patel, a passionate React Native developer with a love for crafting elegant,
-                        user-centric mobile experiences.Ever since I embarked on my journey into the world of software
-                        development, I've been captivated by the endless possibilities of mobile technology. From
-                        building
-                        sleek UIs to optimizing app performance, I thrive on the challenges and rewards of creating
-                        seamless
-                        mobile applications that leave a lasting impression.
+                    <p class="profile-bio">
+                        A passionate React Native developer with a love for crafting elegant,
+                        user-centric mobile experiences. From building sleek UIs to optimizing app performance,
+                        I thrive on creating seamless mobile applications that leave a lasting impression.
                     </p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">4.5+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Apps Published</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                    </div>
+                    <div class="profile-contact">
+                        <a href="mailto:patellalit626@gmail.com" class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>patellalit626@gmail.com</span>
+                        </a>
+                        <a href="tel:+918114493700" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8114493700</span>
+                        </a>
+                        <a href="https://goo.gl/maps/your-location" target="_blank" class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Sirohi, Rajasthan</span>
+                        </a>
+                    </div>
+                    <div class="profile-cta">
+                        <a href="#contact" class="cta-button primary">Get In Touch</a>
+                        <a href="#portfolio" class="cta-button secondary">View Work</a>
+                    </div>
                 </div>
-
-
+                <div class="profile-image-section">
+                    <div class="image-container">
+                        <img src="./assets/images/lalt.jpeg" class="profile-pic" alt="Lalit Patel">
+                        <div class="experience-badge">
+                            <span class="years">4.5+</span>
+                            <span class="text">Years of<br>Experience</span>
+                        </div>
+                    </div>
+                    <div class="social-media-icons">
+                        <a class="profile-icon" href="https://www.linkedin.com/in/lalit-patel-0a089b1a9/" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a class="profile-icon" href="https://github.com/lalitpatel11" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a class="profile-icon" href="https://github.com/lalitpatel11" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </main>
+        <main class="about-section" id="about">
+            <h2 class="about-title">About Me</h2>
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-description">
+                            I am a passionate Software Developer with 4.5+ years of experience in building cross-platform mobile applications. 
+                            My expertise lies in React Native development, where I combine technical skills with creative problem-solving 
+                            to deliver exceptional user experiences.
+                        </p>
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <i class="fas fa-birthday-cake"></i>
+                                <div class="detail-content">
+                                    <span class="detail-label">Birthday</span>
+                                    <span class="detail-value">5 August 1998</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="detail-content">
+                                    <span class="detail-label">Degree</span>
+                                    <span class="detail-value">Bsc (Information Technology)</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="detail-content">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Sirohi, Rajasthan-307022</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="detail-content">
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">patellalit626@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="detail-content">
+                                    <span class="detail-label">Phone</span>
+                                    <span class="detail-value">+91 8114493700</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="./assets/images/lalt.jpeg" alt="Lalit Patel" class="about-profile-pic">
+                        <div class="about-badge">
+                            <span class="badge-icon"><i class="fas fa-code"></i></span>
+                            <span class="badge-text">Full Stack Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-
-            <div class="image-part">
-                <img src="./assets/images/lalt.jpeg" class="profile-pic" alt="lalit patel">
-                <div class="social-media-icons">
-                    <a class="profile-icon" href="https://www.linkedin.com/in/lalit-patel-0a089b1a9/" target="_blank"
-                        rel="noopener">
-                        <i class="fa-brands fa-linkedin"></i>
+        <main class="resume-section" id="resume">
+            <h2 class="about-title">Resume</h2>
+            <div class="resume-container">
+                <div class="resume-actions">
+                    <a href="./assets/resume/Lalit_Patel_Resume.pdf" download class="download-button">
+                        <i class="fas fa-download"></i>
+                        Download Resume
                     </a>
-                    <a class="profile-icon" href="https://github.com/lalitpatel11" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-
-                    <a class="profile-icon" href="https://github.com/lalitpatel11" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-instagram"></i>
+                    <a href="./assets/resume/Lalit_Patel_Resume.pdf" target="_blank" class="view-button">
+                        <i class="fas fa-eye"></i>
+                        View Resume
                     </a>
                 </div>
             </div>
         </main>
-        <main>
-            <h2 class="about-title">About</h2>
-            <strong>Birthday:</strong> <span>5 August 1998</span><br />
-            <strong>Degree:</strong> <span>Bsc (Information Technology)</span><br />
-            <strong>City:</strong> <span>Sirohi,Rajasthan-307022</span><br />
-            <strong>Email:</strong> <span>patellalit626@gmail.com</span><br />
-            <strong>Mobile No.:</strong> <span>+91 8114493700</span><br />
-            <strong>Birthday:</strong> <span>5 August 1998</span><br />
+
+        <main class="experience-section">
+            <h2 class="about-title">Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Software Developer – Nile Technologies PVT LTD</h3>
+                    <span class="experience-date">June 2021 – Present, Noida</span>
+                </div>
+                <p class="experience-description">
+                    Developed and maintained cross-platform mobile applications using React Native for Android and iOS. 
+                    Integrated APIs and third-party libraries to enhance app functionality, including Firebase, Google Maps, 
+                    and payment gateways. Deployed and managed apps on Play Store and App Store, ensuring compliance with 
+                    platform guidelines.
+                </p>
+                <div class="project-list">
+                    <h4>Live Apps:</h4>
+                    <ul>
+                        <li>MAKS Mobile App</li>
+                        <li>Brand NUE</li>
+                        <li>Cosmologo</li>
+                        <li>Xpede User & Xpede Driver</li>
+                        <li>Show Search</li>
+                        <li>DoNotCarry & DoNotCarry Driver</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>React Native Developer – The Schnell Apps</h3>
+                    <span class="experience-date">January 2021 – June 2021, Bhiwandi, Maharashtra</span>
+                </div>
+                <p class="experience-description">
+                    Developed mobile applications using React Native, focusing on modular and reusable components. 
+                    Assisted in bug fixing, performance tuning, and app deployment on the Play Store.
+                </p>
+                <div class="project-list">
+                    <h4>Live Apps:</h4>
+                    <ul>
+                        <li>Keebo</li>
+                        <li>Keebo Restaurant Partner</li>
+                        <li>Keebo Delivery Partner</li>
+                        <li>NBH Solution</li>
+                    </ul>
+                </div>
+            </div>
         </main>
+
         <main>
             <h2 class="about-title">Skills</h2>
             <ul class="skill-list">
@@ -128,140 +294,56 @@
                 </div>
             </ul>
         </main>
+
+        <main class="education-section">
+            <h2 class="about-title">Education</h2>
+            <div class="education-item">
+                <h3>B.sc. (Information Technology)</h3>
+                <p>Bhiwandi Nizampur Nagar College • Bhiwandi, Maharashtra • 2020 • 9.21</p>
+            </div>
+            <div class="education-item">
+                <h3>12th Class (Science)</h3>
+                <p>B.S.J Govt. Sr. Sec. School • Pindwara, Rajasthan • 2017 • 77.60%</p>
+            </div>
+            <div class="education-item">
+                <h3>10th Class</h3>
+                <p>Navin Adarsh Vidya Mandir School • Pindwara, Rajasthan • 2015 • 87.50%</p>
+            </div>
+        </main>
+
         <main>
             <h2 class="about-title">Portfolio</h2>
             <div class="Portfolio-div">
-                <div class="project-div">
-                    <img class="proj-image" src="./assets/images/appicon/keebo.webp" alt="Keebo">
-                    <p class="project-name">Keebo</p>
-                    <div class="flex-row">
-                        <div>
-                            <a href="">
-                                <i class="fa-brands fa-app-store fa-xl proj-icon"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa-brands fa-google-play fa-xl proj-icon"></i>
-                            </a>
+                // ... portfolio content ...
+            </div>
+        </main>
 
-                        </div>
-                        <a href="">
-                            <i class="fa-regular fa-circle-right fa-2xl"></i>
-                        </a>
-                    </div>
+        <main class="personal-projects-section">
+            <h2 class="about-title">Personal Projects</h2>
+            <div class="project-grid">
+                <div class="personal-project-item">
+                    <h3>rn-value-picker</h3>
+                    <p>React native value picker is a simple measurement's unit value picker with defined range.</p>
+                    <a href="https://www.npmjs.com/package/rn-value-picker" target="_blank" class="project-link">
+                        <i class="fa-brands fa-npm"></i> View on NPM
+                    </a>
                 </div>
-                <div class="project-div">
-                    <img class="proj-image" src="./assets/images/appicon/keebo-restro.webp"
-                        alt="Keebo Restaurant Partner">
-                    <p class="project-name">Keebo Restaurant Partner</p>
-                    <div class="flex-row">
-                        <div>
-                            <a href="">
-                                <i class="fa-brands fa-app-store fa-xl proj-icon"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa-brands fa-google-play fa-xl proj-icon"></i>
-                            </a>
-
-                        </div>
-                        <a href="">
-                            <i class="fa-regular fa-circle-right fa-2xl"></i>
-                        </a>
-                    </div>
+                
+                <div class="personal-project-item">
+                    <h3>Tic Tac Toe</h3>
+                    <p>A simple tic tac toe game developed in vb.net.</p>
+                    <a href="https://github.com/lalitpatel11/Tic-Tac-Toe" target="_blank" class="project-link">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
                 </div>
-                <div class="project-div">
-                    <img class="proj-image" src="./assets/images/appicon/keebo-delivery.webp"
-                        alt="Keebo Delivery Partner">
-                    <p class="project-name">Keebo Delivery Partner</p>
-                    <div class="flex-row">
-                        <div>
-                            <a href="">
-                                <i class="fa-brands fa-app-store fa-xl proj-icon"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa-brands fa-google-play fa-xl proj-icon"></i>
-                            </a>
-
-                        </div>
-                        <a href="">
-                            <i class="fa-regular fa-circle-right fa-2xl"></i>
-                        </a>
-                    </div>
+                
+                <div class="personal-project-item">
+                    <h3>MovieApp</h3>
+                    <p>A simple movie search and detail app using expo.</p>
+                    <a href="https://github.com/lalitpatel11/movieApp" target="_blank" class="project-link">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
                 </div>
-                <div class="project-div">
-                    <img class="proj-image" src="./assets/images/appicon/nbh.webp" alt="NBH Solution">
-                    <p class="project-name">NBH Solution</p>
-                    <div class="flex-row">
-                        <div>
-                            <a href="">
-                                <i class="fa-brands fa-app-store fa-xl proj-icon"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa-brands fa-google-play fa-xl proj-icon"></i>
-                            </a>
-
-                        </div>
-                        <a href="">
-                            <i class="fa-regular fa-circle-right fa-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-div">
-                    <img class="proj-image" src="./assets/images/appicon/maks.webp" alt="M.A.K.S. TAX Mobile App">
-                    <p class="project-name">M.A.K.S. TAX Mobile App</p>
-                    <div class="flex-row">
-                        <div>
-                            <a href="">
-                                <i class="fa-brands fa-app-store fa-xl proj-icon"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa-brands fa-google-play fa-xl proj-icon"></i>
-                            </a>
-
-                        </div>
-                        <a href="">
-                            <i class="fa-regular fa-circle-right fa-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-div">
-                    <img class="proj-image" src="./assets/images/appicon/brandnue.webp" alt="Brand NUE">
-                    <p class="project-name">Brand NUE</p>
-                    <div class="flex-row">
-                        <div>
-                            <a href="">
-                                <i class="fa-brands fa-app-store fa-xl proj-icon"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa-brands fa-google-play fa-xl proj-icon"></i>
-                            </a>
-
-                        </div>
-                        <a href="">
-                            <i class="fa-regular fa-circle-right fa-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-div">
-                    <img class="proj-image" src="./assets/images/appicon/cosmologo.webp" alt="Cosmologo">
-                    <p class="project-name">Cosmologo</p>
-                    <div class="flex-row">
-                        <div>
-                            <a href="">
-                                <i class="fa-brands fa-app-store fa-xl proj-icon"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa-brands fa-google-play fa-xl proj-icon"></i>
-                            </a>
-
-                        </div>
-                        <a href="">
-                            <i class="fa-regular fa-circle-right fa-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-
-
             </div>
         </main>
     </div>
