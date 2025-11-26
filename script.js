@@ -1,26 +1,43 @@
-// Get all the progress bars
-const progressBars = document.querySelectorAll(".progress-bar");
+document.addEventListener('DOMContentLoaded', () => {
+  // Skill progress bars
+  const progressBars = document.querySelectorAll(".progress-bar");
+  progressBars.forEach((progressBar) => {
+    const progress = progressBar.dataset.progress;
+    progressBar.style.width = progress;
+  });
 
-// Update the width of each progress bar based on the data-progress attribute
-progressBars.forEach((progressBar) => {
-  const progress = progressBar.dataset.progress;
-  progressBar.style.setProperty("--progress-width", progress);
+  // Scroll progress bar
+  const scrollProgressBar = document.createElement('div');
+  scrollProgressBar.id = 'scroll-progress';
+  document.body.appendChild(scrollProgressBar);
+
+  function updateScrollProgress() {
+    const scrollTop = window.scrollY || window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgressBar.style.width = `${scrolled}%`;
+  }
+
+  window.addEventListener('scroll', updateScrollProgress);
+  updateScrollProgress();
+
+  // Hero parallax (desktop only)
+  const heroLayers = document.querySelectorAll('.hero-parallax');
+  if (heroLayers.length && window.innerWidth > 768) {
+    window.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) - 0.5;
+      const y = (e.clientY / window.innerHeight) - 0.5;
+
+      heroLayers.forEach(layer => {
+        const depth = parseFloat(layer.dataset.depth || '0.04');
+        const moveX = -x * depth * 40;
+        const moveY = -y * depth * 40;
+        layer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+      });
+    });
+  }
+
 });
-
-// Sticky Header
-const header = document.querySelector('header');
-const scrollThreshold = 50;
-
-function handleScroll() {
-    if (window.scrollY > scrollThreshold) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-}
-
-// Add scroll event listener
-window.addEventListener('scroll', handleScroll);
 
 const words = [
   "React Native Dev",
@@ -177,4 +194,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Scroll reveal for sections
+    const revealSections = document.querySelectorAll('.reveal-on-scroll');
+    if ('IntersectionObserver' in window && revealSections.length) {
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.15,
+            }
+        );
+
+        revealSections.forEach((section) => revealObserver.observe(section));
+    } else {
+        // Fallback for very old browsers
+        revealSections.forEach((section) => section.classList.add('is-visible'));
+    }
 });

@@ -49,12 +49,16 @@
                         <span class="color-preview monochrome"></span>
                         Monochrome
                     </button>
+                    <button class="theme-option" data-theme="futuristic">
+                        <span class="color-preview futuristic"></span>
+                        Futuristic
+                    </button>
                 </div>
             </div>
         </header>
-        <main class="profile-info" id="home">
+        <main class="profile-info hero-intro" id="home">
             <div class="profile-content">
-                <div class="profile-text">
+                <div class="profile-text hero-parallax" data-depth="0.04">
                     <div class="profile-greeting">
                         <span class="greeting-text">👋 Hello, I am</span>
                     </div>
@@ -105,58 +109,134 @@
                         <a href="#portfolio" class="cta-button secondary">View Work</a>
                     </div>
                 </div>
-                <div class="profile-image-section">
-                    <div class="image-container">
-                        <img src="./assets/images/lalt.jpeg" class="profile-pic" alt="Lalit Patel">
-                        <div class="experience-badge">
-                            <span class="years">4.5+</span>
-                            <span class="text">Years of<br>Experience</span>
-                        </div>
+                <div class="profile-image-section hero-parallax" data-depth="0.09">
+                    <div class="hero-orbit">
+                        <svg class="hero-orbit-svg" viewBox="0 0 320 320" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="orbitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00b894" />
+                                    <stop offset="50%" stop-color="#6c5ce7" />
+                                    <stop offset="100%" stop-color="#4facfe" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="160" cy="160" r="80" fill="none" stroke="url(#orbitGradient)" stroke-width="1.5" stroke-dasharray="4 6" />
+                            <circle cx="160" cy="160" r="120" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="2 10" />
+                            <circle class="hero-orbit-node" cx="40" cy="160" r="4" />
+                            <circle class="hero-orbit-node" cx="280" cy="160" r="4" />
+                            <circle class="hero-orbit-node" cx="160" cy="40" r="4" />
+                            <circle class="hero-orbit-node" cx="160" cy="280" r="4" />
+                            <text x="50%" y="50%" text-anchor="middle" dy="0.35em" class="hero-orbit-text">&lt;/&gt;</text>
+                        </svg>
                     </div>
-                    <div class="social-media-icons">
-                        <a class="profile-icon" href="https://www.linkedin.com/in/lalit-patel-0a089b1a9/" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a class="profile-icon" href="https://github.com/lalitpatel11" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a class="profile-icon" href="https://github.com/lalitpatel11" target="_blank" rel="noopener">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
+                    <div class="hero-dev-stack">
+                        <div class="hero-terminal">
+                            <div class="hero-terminal-header">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                                <span class="hero-terminal-title">npx create-mobile-experience</span>
+                            </div>
+                            <div class="hero-terminal-body">
+                                <p class="hero-terminal-line">$ yarn start</p>
+                                <p class="hero-terminal-line success">✔ Bundling React Native project…</p>
+                                <p class="hero-terminal-line success">✔ Connecting to Android & iOS simulators…</p>
+                                <p class="hero-terminal-line info">ℹ Shipping smooth UI, offline-first, and fast builds.</p>
+                            </div>
+                        </div>
+                        <div class="hero-code-card">
+                            <div class="hero-code-header">
+                                <span class="hero-code-label">stack.ts</span>
+                            </div>
+                            <pre class="hero-code-body"><code>const stack = [
+  "React Native",
+  "TypeScript",
+  "Node.js",
+  "Expo",
+  "Figma → Store Release"
+] as const;</code></pre>
+                        </div>
+                        <div class="social-media-icons">
+                            <a class="profile-icon" href="https://www.linkedin.com/in/lalit-patel-0a089b1a9/" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a class="profile-icon" href="https://github.com/lalitpatel11" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a class="profile-icon" href="https://github.com/lalitpatel11" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
-        <main class="about-section" id="about">
+        <main class="about-section reveal-on-scroll" id="about">
             <h2 class="about-title">About Me</h2>
             <div class="about-container">
                 <div class="about-content">
-                    <div class="about-text">
+                    <!-- Coder-style about block -->
+                    <div class="about-code">
+                        <div class="about-code-header">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                            <span class="about-code-filename">about-me.ts</span>
+                        </div>
+                        <div class="about-code-body">
+                            <div class="about-code-lines">
+                                <span>01</span>
+                                <span>02</span>
+                                <span>03</span>
+                                <span>04</span>
+                                <span>05</span>
+                                <span>06</span>
+                                <span>07</span>
+                                <span>08</span>
+                                <span>09</span>
+                                <span>10</span>
+                                <span>11</span>
+                                <span>12</span>
+                            </div>
+                            <pre class="about-code-content">
+<code><span class="code-keyword">const</span> <span class="code-variable">developer</span> <span class="code-operator">=</span> <span class="code-brace">{</span>
+  <span class="code-property">name</span><span class="code-operator">:</span> <span class="code-string">'Lalit Patel'</span><span class="code-punctuation">,</span>
+  <span class="code-property">role</span><span class="code-operator">:</span> <span class="code-string">'React Native Developer'</span><span class="code-punctuation">,</span>
+  <span class="code-property">experience</span><span class="code-operator">:</span> <span class="code-number">4.5</span> <span class="code-comment">// years of building mobile apps</span>
+  <span class="code-property">location</span><span class="code-operator">:</span> <span class="code-string">'Sirohi, Rajasthan, IN'</span><span class="code-punctuation">,</span>
+  <span class="code-property">techStack</span><span class="code-operator">:</span> <span class="code-bracket">[</span>
+    <span class="code-string">'React Native'</span><span class="code-punctuation">,</span> <span class="code-string">'React'</span><span class="code-punctuation">,</span>
+    <span class="code-string">'Node.js'</span><span class="code-punctuation">,</span> <span class="code-string">'.NET'</span><span class="code-punctuation">,</span>
+    <span class="code-string">'Flutter'</span>
+  <span class="code-bracket">]</span><span class="code-punctuation">,</span>
+  <span class="code-property">values</span><span class="code-operator">:</span> <span class="code-bracket">[</span><span class="code-string">'clean UI'</span><span class="code-punctuation">,</span> <span class="code-string">'smooth UX'</span><span class="code-punctuation">,</span> <span class="code-string">'performance'</span><span class="code-bracket">]</span>
+<span class="code-brace">}</span><span class="code-punctuation">;</span>
+
+<span class="code-keyword">export default</span> <span class="code-variable">developer</span><span class="code-punctuation">;</span></code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <!-- Quick facts -->
+                    <div class="about-quick-facts">
                         <p class="about-description">
-                            I am a passionate Software Developer with 4.5+ years of experience in building cross-platform mobile applications. 
-                            My expertise lies in React Native development, where I combine technical skills with creative problem-solving 
-                            to deliver exceptional user experiences.
+                            I craft **production-ready React Native apps** that feel fast, reliable, and polished.
+                            I enjoy taking a product from idea to store-ready build – from designing flows and components
+                            to shipping and monitoring real users.
                         </p>
                         <div class="about-details">
-                            <div class="detail-item">
-                                <i class="fas fa-birthday-cake"></i>
-                                <div class="detail-content">
-                                    <span class="detail-label">Birthday</span>
-                                    <span class="detail-value">5 August 1998</span>
-                                </div>
-                            </div>
+                            
                             <div class="detail-item">
                                 <i class="fas fa-graduation-cap"></i>
                                 <div class="detail-content">
                                     <span class="detail-label">Degree</span>
-                                    <span class="detail-value">Bsc (Information Technology)</span>
+                                    <span class="detail-value">B.Sc. (Information Technology)</span>
                                 </div>
                             </div>
                             <div class="detail-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div class="detail-content">
                                     <span class="detail-label">Location</span>
-                                    <span class="detail-value">Sirohi, Rajasthan-307022</span>
+                                    <span class="detail-value">Sirohi, Rajasthan - 307022</span>
                                 </div>
                             </div>
                             <div class="detail-item">
@@ -175,18 +255,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about-image">
-                        <img src="./assets/images/lalt.jpeg" alt="Lalit Patel" class="about-profile-pic">
-                        <div class="about-badge">
-                            <span class="badge-icon"><i class="fas fa-code"></i></span>
-                            <span class="badge-text">Full Stack Developer</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </main>
 
-        <main class="resume-section" id="resume">
+        <main class="resume-section reveal-on-scroll" id="resume">
             <h2 class="about-title">Resume</h2>
             <div class="resume-container">
                 <div class="resume-actions">
@@ -202,9 +275,9 @@
             </div>
         </main>
 
-        <main class="experience-section" id="experience">
+        <main class="experience-section reveal-on-scroll" id="experience">
             <h2 class="about-title">Experience</h2>
-            <div class="experience-item">
+            <div class="experience-item tilt-card">
                 <div class="experience-header">
                     <h3>Software Developer – Nile Technologies PVT LTD</h3>
                     <span class="experience-date">June 2021 – Present, Noida</span>
@@ -348,7 +421,7 @@
                 </div>
             </div>
 
-            <div class="experience-item">
+            <div class="experience-item tilt-card">
                 <div class="experience-header">
                     <h3>React Native Developer – The Schnell Apps</h3>
                     <span class="experience-date">January 2021 – June 2021, Bhiwandi, Maharashtra</span>
@@ -409,95 +482,191 @@
             </div>
         </main>
 
-        <main>
+        <main class="skills-section reveal-on-scroll">
             <h2 class="about-title">Skills</h2>
+            <p class="skills-subtitle">
+                A blend of modern frameworks and solid fundamentals, focused on building smooth, scalable experiences.
+            </p>
             <ul class="skill-list">
-                <div class="skill-div">
-                    <div class="skill-name-perc">
-                        <p>React Native</p>
-                        <p>90%</p>
+                <li class="skill-div">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <span class="skill-icon react-skill">
+                                <i class="fab fa-react"></i>
+                            </span>
+                            <div>
+                                <h3 class="skill-title">React Native</h3>
+                                <p class="skill-tagline">Cross-platform mobile apps</p>
+                            </div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
                     </div>
-
                     <div class="progress-bar-container">
                         <div class="progress-bar" data-progress="90%"></div>
                     </div>
-                </div>
-                <div class="skill-div">
-                    <div class="skill-name-perc">
-                        <p>Node JS</p>
-                        <p>70%</p>
-                    </div>
+                </li>
 
+                <li class="skill-div">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <span class="skill-icon node-skill">
+                                <i class="fab fa-node-js"></i>
+                            </span>
+                            <div>
+                                <h3 class="skill-title">Node.js</h3>
+                                <p class="skill-tagline">APIs & backend services</p>
+                            </div>
+                        </div>
+                        <span class="skill-percentage">70%</span>
+                    </div>
                     <div class="progress-bar-container">
                         <div class="progress-bar" data-progress="70%"></div>
                     </div>
-                </div>
-                <div class="skill-div">
-                    <div class="skill-name-perc">
-                        <p>Flutter</p>
-                        <p>60%</p>
-                    </div>
+                </li>
 
+                <li class="skill-div">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <span class="skill-icon flutter-skill">
+                                <i class="fas fa-mobile-alt"></i>
+                            </span>
+                            <div>
+                                <h3 class="skill-title">Flutter</h3>
+                                <p class="skill-tagline">Beautiful multi-platform UIs</p>
+                            </div>
+                        </div>
+                        <span class="skill-percentage">60%</span>
+                    </div>
                     <div class="progress-bar-container">
                         <div class="progress-bar" data-progress="60%"></div>
                     </div>
-                </div>
-                <div class="skill-div">
-                    <div class="skill-name-perc">
-                        <p>UI/UX Designer</p>
-                        <p>90%</p>
-                    </div>
+                </li>
 
+                <li class="skill-div">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <span class="skill-icon design-skill">
+                                <i class="fas fa-pencil-ruler"></i>
+                            </span>
+                            <div>
+                                <h3 class="skill-title">UI / UX Design</h3>
+                                <p class="skill-tagline">Clean, user-centric interfaces</p>
+                            </div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
                     <div class="progress-bar-container">
                         <div class="progress-bar" data-progress="90%"></div>
                     </div>
-                </div>
-                <div class="skill-div">
-                    <div class="skill-name-perc">
-                        <p>.NET</p>
-                        <p>80%</p>
-                    </div>
+                </li>
 
+                <li class="skill-div">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <span class="skill-icon dotnet-skill">
+                                <i class="fas fa-code"></i>
+                            </span>
+                            <div>
+                                <h3 class="skill-title">.NET</h3>
+                                <p class="skill-tagline">Robust applications & tooling</p>
+                            </div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
                     <div class="progress-bar-container">
                         <div class="progress-bar" data-progress="80%"></div>
                     </div>
-                </div>
-                <div class="skill-div">
-                    <div class="skill-name-perc">
-                        <p>React</p>
-                        <p>85%</p>
-                    </div>
+                </li>
 
+                <li class="skill-div">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <span class="skill-icon react-skill">
+                                <i class="fab fa-react"></i>
+                            </span>
+                            <div>
+                                <h3 class="skill-title">React</h3>
+                                <p class="skill-tagline">Modern web applications</p>
+                            </div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
                     <div class="progress-bar-container">
                         <div class="progress-bar" data-progress="85%"></div>
                     </div>
-                </div>
-                <div class="skill-div">
-                    <div class="skill-name-perc">
-                        <p>Next.js</p>
-                        <p>75%</p>
-                    </div>
+                </li>
 
+                <li class="skill-div">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <span class="skill-icon next-skill">
+                                <i class="fas fa-layer-group"></i>
+                            </span>
+                            <div>
+                                <h3 class="skill-title">Next.js</h3>
+                                <p class="skill-tagline">Full-stack React & SSR</p>
+                            </div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
                     <div class="progress-bar-container">
                         <div class="progress-bar" data-progress="75%"></div>
                     </div>
-                </div>
+                </li>
             </ul>
         </main>
 
-        <main class="education-section">
+        <main class="education-section reveal-on-scroll">
             <h2 class="about-title">Education</h2>
-            <div class="education-item">
-                <h3>B.sc. (Information Technology)</h3>
-                <p>Bhiwandi Nizampur Nagar College • Bhiwandi, Maharashtra • 2020 • 9.21</p>
-            </div>
-            <div class="education-item">
-                <h3>12th Class (Science)</h3>
-                <p>B.S.J Govt. Sr. Sec. School • Pindwara, Rajasthan • 2017 • 77.60%</p>
-            </div>
-            <div class="education-item">
-                <h3>10th Class</h3>
-                <p>Navin Adarsh Vidya Mandir School • Pindwara, Rajasthan • 2015 • 87.50%</p>
+            <p class="education-subtitle">
+                A solid academic foundation in technology and science that supports my work as a **software developer**.
+            </p>
+
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-year-pill">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>2020</span>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">B.Sc. (Information Technology)</h3>
+                        <p class="education-institute">Bhiwandi Nizampur Nagar College, Bhiwandi, Maharashtra</p>
+                        <div class="education-meta">
+                            <span class="education-tag">CGPA 9.21</span>
+                            <span class="education-tag">Information Technology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-year-pill">
+                        <i class="fas fa-school"></i>
+                        <span>2017</span>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Senior Secondary (12th, Science)</h3>
+                        <p class="education-institute">B.S.J Govt. Sr. Sec. School, Pindwara, Rajasthan</p>
+                        <div class="education-meta">
+                            <span class="education-tag">77.60%</span>
+                            <span class="education-tag">Science Stream</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-year-pill">
+                        <i class="fas fa-book-reader"></i>
+                        <span>2015</span>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-degree">Secondary (10th)</h3>
+                        <p class="education-institute">Navin Adarsh Vidya Mandir School, Pindwara, Rajasthan</p>
+                        <div class="education-meta">
+                            <span class="education-tag">87.50%</span>
+                            <span class="education-tag">Board Examination</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -508,35 +677,87 @@
             </div>
         </main> -->
 
-        <main class="personal-projects-section">
+        <main class="personal-projects-section reveal-on-scroll" id="portfolio">
             <h2 class="about-title">Personal Projects</h2>
+            <p class="projects-subtitle">
+                A few things I’ve built for fun and learning – from published components to small experiments.
+            </p>
             <div class="project-grid">
-                <div class="personal-project-item">
-                    <h3>rn-value-picker</h3>
-                    <p>React native value picker is a simple measurement's unit value picker with defined range.</p>
-                    <a href="https://www.npmjs.com/package/rn-value-picker" target="_blank" class="project-link">
-                        <i class="fa-brands fa-npm"></i> View on NPM
-                    </a>
-                </div>
+                <article class="personal-project-item tilt-card">
+                    <div class="project-header">
+                        <span class="project-pill project-pill--npm">
+                            <i class="fa-brands fa-npm"></i>
+                            NPM Package
+                        </span>
+                        <h3>rn-value-picker</h3>
+                    </div>
+                    <p class="project-description">
+                        React Native value picker component for selecting measurement values within a defined range –
+                        designed to feel native and smooth.
+                    </p>
+                    <div class="project-meta">
+                        <div class="project-tags">
+                            <span class="project-tag">React Native</span>
+                            <span class="project-tag">Component</span>
+                            <span class="project-tag">Open Source</span>
+                        </div>
+                        <a href="https://www.npmjs.com/package/rn-value-picker" target="_blank" class="project-link project-link--npm">
+                            <span>View on NPM</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
                 
-                <div class="personal-project-item">
-                    <h3>Tic Tac Toe</h3>
-                    <p>A simple tic tac toe game developed in vb.net.</p>
-                    <a href="https://github.com/lalitpatel11/Tic-Tac-Toe" target="_blank" class="project-link">
-                        <i class="fa-brands fa-github"></i> View on GitHub
-                    </a>
-                </div>
+                <article class="personal-project-item tilt-card">
+                    <div class="project-header">
+                        <span class="project-pill project-pill--game">
+                            <i class="fa-solid fa-gamepad"></i>
+                            Mini Game
+                        </span>
+                        <h3>Tic Tac Toe</h3>
+                    </div>
+                    <p class="project-description">
+                        Classic Tic Tac Toe game with clean UI and simple game logic, originally built in VB.NET.
+                    </p>
+                    <div class="project-meta">
+                        <div class="project-tags">
+                            <span class="project-tag">VB.NET</span>
+                            <span class="project-tag">Game Logic</span>
+                        </div>
+                        <a href="https://github.com/lalitpatel11/Tic-Tac-Toe" target="_blank" class="project-link project-link--github">
+                            <span>View on GitHub</span>
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </article>
                 
-                <div class="personal-project-item">
-                    <h3>MovieApp</h3>
-                    <p>A simple movie search and detail app using expo.</p>
-                    <a href="https://github.com/lalitpatel11/movieApp" target="_blank" class="project-link">
-                        <i class="fa-brands fa-github"></i> View on GitHub
-                    </a>
-                </div>
+                <article class="personal-project-item tilt-card">
+                    <div class="project-header">
+                        <span class="project-pill project-pill--mobile">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            Mobile App
+                        </span>
+                        <h3>MovieApp</h3>
+                    </div>
+                    <p class="project-description">
+                        Simple movie search and detail app using Expo – great for experimenting with API data,
+                        navigation and clean layouts.
+                    </p>
+                    <div class="project-meta">
+                        <div class="project-tags">
+                            <span class="project-tag">React Native</span>
+                            <span class="project-tag">Expo</span>
+                            <span class="project-tag">REST API</span>
+                        </div>
+                        <a href="https://github.com/lalitpatel11/movieApp" target="_blank" class="project-link project-link--github">
+                            <span>View on GitHub</span>
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
         </main>
-         <main class="experience-section" id="experience">
+         <main class="experience-section reveal-on-scroll" id="experience-freelance">
             <h2 class="about-title">Freelance Projects</h2>
             <div class="experience-item">
                 <div class="experience-header">
