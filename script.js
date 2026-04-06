@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Skill progress bars
-  const progressBars = document.querySelectorAll(".progress-bar");
-  progressBars.forEach((progressBar) => {
-    const progress = progressBar.dataset.progress;
-    progressBar.style.width = progress;
-  });
-
   // Scroll progress bar
   const scrollProgressBar = document.createElement('div');
   scrollProgressBar.id = 'scroll-progress';
@@ -21,9 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateScrollProgress);
   updateScrollProgress();
 
-  // Hero parallax (desktop only)
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    document.querySelectorAll('.reveal-on-scroll').forEach((el) => el.classList.add('is-visible'));
+  }
+
+  // Hero parallax (desktop only, not when user prefers reduced motion)
   const heroLayers = document.querySelectorAll('.hero-parallax');
-  if (heroLayers.length && window.innerWidth > 768) {
+  if (heroLayers.length && window.innerWidth > 768 && !prefersReducedMotion) {
     window.addEventListener('mousemove', (e) => {
       const x = (e.clientX / window.innerWidth) - 0.5;
       const y = (e.clientY / window.innerHeight) - 0.5;
@@ -34,6 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const moveY = -y * depth * 40;
         layer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
       });
+    });
+  }
+
+  const skillList = document.querySelector('.skill-list');
+  if (skillList) {
+    const scrollStep = () => Math.min(320, Math.round(skillList.clientWidth * 0.85));
+    skillList.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      const delta = e.key === 'ArrowRight' ? scrollStep() : -scrollStep();
+      const behavior = prefersReducedMotion ? 'auto' : 'smooth';
+      skillList.scrollBy({ left: delta, behavior });
     });
   }
 
@@ -89,7 +100,14 @@ function deleteChar() {
   }, 300);
 }
 let gen = generator();
-printChar(words[gen.next().value]);
+if (text) {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    text.textContent = words[0];
+    text.classList.add(colors[0]);
+  } else {
+    printChar(words[gen.next().value]);
+  }
+}
 
 // Theme switcher functionality
 document.addEventListener('DOMContentLoaded', () => {
@@ -97,10 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeOptions = document.querySelector('.theme-options');
     const themeButtons = document.querySelectorAll('.theme-option');
     
-    // Load saved theme
+    // Load saved theme (Glass Gold is default when nothing stored)
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
+    } else {
+        document.documentElement.setAttribute('data-theme', 'glass-gold');
+        localStorage.setItem('theme', 'glass-gold');
     }
 
     // Toggle theme options
