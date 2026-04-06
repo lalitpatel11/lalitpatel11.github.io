@@ -1156,6 +1156,21 @@ nav>ul>li a:hover {
     line-height: 1.6;
 }
 
+.experience-bullets {
+    margin: 0 0 0.5rem 0;
+    padding-left: 1.25rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.experience-bullets li {
+    margin-bottom: 0.6rem;
+}
+
+.experience-bullets li:last-child {
+    margin-bottom: 0;
+}
+
 .project-list h4 {
     color: var(--accent-color);
     margin-bottom: 0.5rem;
